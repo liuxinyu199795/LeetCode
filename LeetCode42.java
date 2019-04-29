@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class LeetCode42 {
-        public static int trap(int[] height) {
+        /*public static int trap(int[] height) {
             if (height == null || height.length <= 2)
                 return 0;
             int maxL = height[0];
@@ -23,6 +23,36 @@ public class LeetCode42 {
             }
             return waterSum;
 
+        }*/
+        public static int trap(int[] height){
+           int length=height.length;
+           int max=height[0],index=0;
+           //算出最高的
+            for (int i = 0; i <length ; i++) {
+                if(max<height[i]){
+                    max=height[i];
+                    index=i;
+                }
+            }
+            //从左边开始接雨水
+            int a=height[0],sumwater=0;
+            for (int i = 0; i <index ; i++) {
+                if(a<height[i]){
+                    a=height[i];
+                }else{
+                    sumwater+=(a-height[i]);
+                }
+            }
+            //从右边开始接雨水
+            int b=height[length-1];
+            for (int i = length-1; i>index ; i--) {
+                if(a<height[i]){
+                    a=height[i];
+                }else{
+                    sumwater+=(a-height[i]);
+                }
+            }
+            return sumwater;
         }
     public static void main(String[] args) {
         int[] nums = new int[]{5,2,1,2,1,5};
