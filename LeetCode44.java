@@ -1,5 +1,5 @@
 public class LeetCode44 {
-    public boolean isMatch(String s, String p) {
+    public static boolean isMatch(String s, String p) {
 
         boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
         dp[0][0] = true;
@@ -23,5 +23,8 @@ public class LeetCode44 {
         return dp[s.length()][p.length()];
     }
     public static void main(String[] args) {
+        String s1="abc";
+        String s2="?b*";
+        System.out.println(isMatch(s1,s2));
     }
 }
