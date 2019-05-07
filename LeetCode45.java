@@ -7,6 +7,7 @@ public class LeetCode45 {
         for (int i = 1; i <nums.length&&i<=max ; i++) {
             dp[i]=1;
         }
+        //开始赋值之后的dp
         for (int i = 1; i <nums.length ; i++) {
             for (int j =max+1 ; j < nums.length&&max<=nums[i]+i; j++) {
                 dp[j]=dp[i]+i;
