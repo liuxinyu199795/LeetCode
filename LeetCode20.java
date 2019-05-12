@@ -1,9 +1,11 @@
-package GaoPinSuanFa;
 
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public class LeetCode20 {
-    public static boolean isValid(String s){
+    /*public static boolean isValid(String s){
         Stack<Character> stack = new Stack<>();
         char[] chars=s.toCharArray();
         for (char chars1:chars) {
@@ -19,6 +21,24 @@ public class LeetCode20 {
     }
     public static boolean isTrue(char c1,char c2){
         return (c1=='('&&c2==')')||(c1=='['&&c2==']')||(c1=='{'&&c2=='}');
+    }*/
+    public static boolean isValid(String s){
+        Map<Character,Character> map = new HashMap<>();
+        map.put(']','[');
+        map.put('}','{');
+        map.put(')','(');
+        Stack<Character> stack = new Stack<>();
+        char[] chars =s.toCharArray();
+        for (char chars1:chars) {
+            if(stack.size()==0){
+                stack.push(chars1);
+            }else if(stack.peek()==map.get(chars1)){
+                stack.pop();
+            }else{
+                stack.push(chars1);
+            }
+        }
+        return stack.size()==0;
     }
     public static void main(String[] args) {
         String str="[]{[]}()";
