@@ -6,7 +6,6 @@ public class LeetCode52 {
         Set<Integer> col = new HashSet<>();
         Set<Integer> z_diagonal = new HashSet<>();
         Set<Integer> f_diagonal = new HashSet<>();
-
         backtrack(0, n,col, z_diagonal, f_diagonal);
         return res;
     }
