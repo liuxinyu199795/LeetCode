@@ -10,7 +10,7 @@ public class LeetCode208 {
         }
     }
     private TrieNode root;
-    public Trie() {
+    public LeetCode208() {
         root = new TrieNode();
         root.val=' ';
     }
