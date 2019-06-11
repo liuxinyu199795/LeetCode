@@ -11,6 +11,7 @@ public class LeetCode122 {
         }
         return sum;
     }
+    //2.动态规划
     public static void main(String[] args) {
     }
 }
