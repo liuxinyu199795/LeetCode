@@ -4,7 +4,7 @@
  * @Description:
  */
 public class LeetCode303 {
-    //1.暴力求解
+    /*//1.暴力求解
     int[] array;
     public NumArray(int[] nums) {
         this.array = nums;
@@ -31,5 +31,5 @@ public class LeetCode303 {
 
     public int sumRange1(int i, int j) {
         return i==0?dp[j]:dp[j]-dp[i-1];
-    }
+    }*/
 }
