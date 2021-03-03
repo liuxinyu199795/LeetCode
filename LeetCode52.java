@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class LeetCode52 {
-    int res = 0;
+    //1.dfs深度优先
+    /*int res = 0;
     public int totalNQueens(int n) {
         Set<Integer> col = new HashSet<>();
         Set<Integer> z_diagonal = new HashSet<>();
@@ -25,6 +26,24 @@ public class LeetCode52 {
             }
         }
         return false;
+    }*/
+    int count = 0;
+    public int totalNQueens(int n) {
+        if(n<=0) return 0;
+        DFS(n,0,0,0,0);
+        return count;
+    }
+    public void DFS(int n,int rows,int cols,int pie,int na){
+        if(rows==n){
+            count++;
+            return;
+        }
+        int bits = (~(cols|pie|na))&((1<<n)-1);//得到当前的空位
+        while(bits>0){
+            int p = bits&-bits;//取最后一个1，即合适的位置
+            DFS(n,rows+1,cols|p,(pie|p)<<1,(na|p)>>1);
+            bits = bits&(bits-1);//去掉最后一个1
+        }
     }
     public static void main(String[] args) {
 
