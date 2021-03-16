@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @Description:
  */
 public class LeetCode706 {
-    //数组法
+    /*//数组法
     int INF = Integer.MAX_VALUE;
     int N = 1000009;
     int[] map = new int[N];
@@ -24,5 +24,5 @@ public class LeetCode706 {
 
     public void remove(int key) {
         map[key] = INF;
-    }
+    }*/
 }
