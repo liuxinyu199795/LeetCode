@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class LeetCode206 {
     public static class ListNode {
        int val;

@@ -1,7 +1,3 @@
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.util.*;
-
 public class LeetCode50 {
     //迭代法
     /*public static double myPow(double x, int n) {

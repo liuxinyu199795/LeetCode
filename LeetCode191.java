@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class LeetCode191 {
     //在末尾每次减一
     public int hammingWeight(int n) {

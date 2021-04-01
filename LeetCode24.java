@@ -1,4 +1,4 @@
-package GaoPinSuanFa;
+
 
 
 public class LeetCode24 {

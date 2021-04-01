@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class LeetCode121 {
     //1.遍历数组，求最小值，以及之后的数与最小值差值的最大值
     /*public int maxProfit(int[] prices) {

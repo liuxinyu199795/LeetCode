@@ -1,5 +1,3 @@
-import java.util.Stack;
-
 public class LeetCode231 {
     //位运算
     public static boolean isPowerOfTwo(int n) {

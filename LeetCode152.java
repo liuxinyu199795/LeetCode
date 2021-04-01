@@ -1,5 +1,3 @@
-import java.util.Map;
-
 public class LeetCode152 {
     /*//1.取巧
     public int maxProduct(int[] nums) {

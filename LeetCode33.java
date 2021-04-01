@@ -1,8 +1,3 @@
-package GaoPinSuanFa;
-
-
-import java.util.Stack;
-
 public class LeetCode33 {
     public static int search(int[] nums, int target) {
         return search(nums,0,nums.length-1,target);

@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class LeetCode69 {
     public int mySqrt(int x) {
         int left=1,right=x,res=0,mid;

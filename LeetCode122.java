@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class LeetCode122 {
     //1.贪心法，局部最优->全局最优
     /*public int maxProfit(int[] prices) {

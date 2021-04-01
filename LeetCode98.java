@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class LeetCode98 {
     public class TreeNode {
       int val;
