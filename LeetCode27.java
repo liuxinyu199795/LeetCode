@@ -2,18 +2,18 @@
 
 
 public class LeetCode27 {
-    public static int removeElement(int[] nums, int val) {
-        int i=0;
-        for(int j=0;j<nums.length;j++){
-            if(nums[j]!=val){
-                nums[i]=nums[j];
-                i++;
+    public int removeElement(int[] nums, int val) {
+        int j = nums.length - 1;
+        for (int i = 0; i <= j; i++) {
+            if (nums[i] == val) {
+                swap(nums, i--, j--);
             }
         }
-        return i;
+        return j + 1;
     }
-    public static void main(String[] args) {
-      int[] nums=new int[]{1,2,3};
-      System.out.println(removeElement(nums,2));
+    void swap(int[] nums, int i, int j) {
+        int tmp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = tmp;
     }
 }
