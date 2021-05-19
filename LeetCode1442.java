@@ -1,3 +1,7 @@
+import java.io.BufferedInputStream;
+import java.io.FilterInputStream;
+import java.io.Reader;
+
 /**
  * @ProjectName: LeetCode
  * @Author: XinyuLiu
@@ -17,10 +21,5 @@ public class LeetCode1442 {
             }
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        int[] res = new int[]{2,3,1,6,7};
-        countTriplets(res);
     }
 }
