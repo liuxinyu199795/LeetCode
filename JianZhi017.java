@@ -1,0 +1,23 @@
+/**
+ * @ProjectName: LeetCode
+ * @Author: XinyuLiu
+ * @Description:
+ */
+public class JianZhi017 {
+    public class TreeNode {
+        int val = 0;
+        TreeNode left = null;
+        TreeNode right = null;
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        return (root1 != null && root2 != null) && (recur(root1,root2) || HasSubtree(root1.left,root2) || HasSubtree(root1.right,root2));
+    }
+    public boolean recur(TreeNode root1,TreeNode root2){
+        if(root2 == null) return true;
+        if(root1 == null || root1.val != root2.val) return false;
+        return recur(root1.left, root1.left) && recur(root2.right,root2.right);
+    }
+}
