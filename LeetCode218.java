@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
+
 /**
  * @ProjectName: LeetCode
  * @Author: XinyuLiu
@@ -24,7 +29,7 @@ public class LeetCode218 {
         });
 
         // 大根堆
-        PriorityQueue<Integer> q = new PriorityQueue<>((a,b)->b-a);
+        PriorityQueue<Integer> q = new PriorityQueue<>((a, b)->b-a);
         int prev = 0;
         q.add(prev);
         for (int[] p : ps) {
