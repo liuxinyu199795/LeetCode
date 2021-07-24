@@ -1,0 +1,22 @@
+import java.util.Stack;
+
+/**
+ * @ProjectName: LeetCode
+ * @Author: XinyuLiu
+ * @Description:
+ */
+public class JianZhi021 {
+    //1.栈+模拟
+    public boolean validateStackSequences(int[] pushed, int[] popped) {
+        Stack<Integer> stack = new Stack<>();
+        int i = 0;
+        for (int num : pushed) {
+            stack.push(num);
+            while(!stack.isEmpty() && stack.peek() == popped[i]){
+                stack.pop();
+                i++;
+            }
+        }
+        return stack.isEmpty();
+    }
+}
