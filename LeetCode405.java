@@ -4,6 +4,7 @@
  * @Description:
  */
 public class LeetCode405 {
+
     public String toHex(int _num) {
         if (_num == 0) return "0";
         long num = _num;
