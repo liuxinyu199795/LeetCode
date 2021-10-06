@@ -7,6 +7,11 @@ import java.util.Map;
  * @Description:
  */
 public class LeetCode166 {
+
+
+
+
+
     public String fractionToDecimal(int numerator, int denominator) {
         long a = numerator,b = denominator;
         if(a % b == 0) return String.valueOf(a / b);
