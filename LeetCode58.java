@@ -1,6 +1,6 @@
 import com.sun.deploy.util.StringUtils;
 
-public class LeetCode058 {
+public class LeetCode58 {
     public int lengthOfLastWord(String s) {
         String[] split = s.split(" ");
         int length = 0;
