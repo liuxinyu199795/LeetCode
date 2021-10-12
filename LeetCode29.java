@@ -2,6 +2,7 @@
 
 
 public class LeetCode29 {
+    //1.位运算（除2就是>>1位）
     public static int divide(int dividend, int divisor) {
         if(dividend==0) return 0;
         if(dividend==Integer.MIN_VALUE&&divisor==-1){
