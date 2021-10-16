@@ -2,7 +2,7 @@ public class LeetCode38 {
     public static String countAndSay(int n) {
         return count("1", 1, n);
     }
-
+    //1.递归
     public static String count(String current, int i, int j) {
         if (i == j) return current;
         if (i == 1) return count("11", ++i, j);
