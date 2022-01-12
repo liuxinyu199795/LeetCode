@@ -15,10 +15,10 @@ public class Jianz012 {
         return false;
     }
     boolean dfs(int i,int j,int k){
-        if(i >= _matrix.length || i< 0 || j > _matrix[0].length || j < 0 || _matrix[i][j] != _word.charAt(k)){
+        if(i >= _matrix.length || i< 0 || j >= _matrix[0].length || j < 0 || _matrix[i][j] != _word.charAt(k)){
             return false;
         }
-        if(k == _word.length()) return true;
+        if(k == _word.length() - 1) return true;
         char tmp = _matrix[i][j];
         _matrix[i][j] = '.';
         boolean res = dfs(i+1,j,k+1) || dfs(i-1,j,k+1) || dfs(i,j-1,k+1) || dfs(i,j+1,k+1);
