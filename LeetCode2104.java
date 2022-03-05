@@ -1,6 +1,6 @@
 public class LeetCode2104 {
     //1.序列DP
-    public long subArrayRanges(int[] nums) {
+    /*public long subArrayRanges(int[] nums) {
         int n = nums.length;
         int[][][] dp = new int[n][n][2];
         //初始化数组
@@ -21,5 +21,20 @@ public class LeetCode2104 {
             }
         }
         return res;
+    }*/
+    //2.枚举
+    public long subArrayRanges(int[] nums) {
+        int n = nums.length;
+        long ans = 0;
+        for (int i = 0; i < n; i++) {
+            int min = nums[i],max = nums[i];
+            for (int j = i + 1; j < n; j++) {
+                min = Math.min(min,nums[j]);
+                max = Math.max(max,nums[j]);
+                ans += max - min;
+            }
+        }
+        return ans;
     }
+
 }
