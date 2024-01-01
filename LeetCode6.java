@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class LeetCode006 {
+public class LeetCode6 {
     static int N = 1010;
     static char[][] g = new char[N][N];
     static int[] idxs = new int[N];
