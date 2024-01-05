@@ -19,9 +19,9 @@ public class LeetCode108 {
             return null;
         }
         int mid = (i + j) / 2;
-        TreeNode root = new TreeNode(nums[mid]);
-        root.left = sorted(nums,i,mid - 1);
-        root.right = sorted(nums,mid + 1,j);
-        return root;
+        TreeNode node = new TreeNode(nums[mid]);
+        node.left = sorted(nums,i,mid - 1);
+        node.right = sorted(nums,mid + 1,j);
+        return node;
     }
 }
