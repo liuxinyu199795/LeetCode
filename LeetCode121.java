@@ -17,7 +17,7 @@ public class LeetCode121 {
         return p;
     }*/
     //2.动态规划
-    public int maxProfit(int[] prices) {
+    /*public int maxProfit(int[] prices) {
         if(prices==null||prices.length==0) return 0;
         int[][] dp = new int[prices.length][3];
         dp[0][0]=0;
@@ -31,6 +31,15 @@ public class LeetCode121 {
             res=Math.max(res,Math.max(dp[i][0],Math.max(dp[i][1],dp[i][2])));
         }
         return res;
+    }*/
+    //3.求每个值跟之前最小值的最大差
+    public int maxProfit(int[] prices) {
+        int profit = 0,min = Integer.MAX_VALUE;
+        for (int price : prices) {
+            min = Math.min(min,price);
+            profit = Math.max(profit,price - min);
+        }
+        return profit;
     }
     public static void main(String[] args) {
     }
