@@ -4,7 +4,7 @@
  * @Description:
  */
 public class LeetCode88 {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    /*public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p = 0;
         for (int i = m; i <m+n ; i++) {
             nums1[i] = nums2[p++];
@@ -12,7 +12,7 @@ public class LeetCode88 {
         //nums1 = bubbleSort(nums1);//冒泡排序
         quickSort(nums1,0,m+n-1);//冒泡排序
 
-    }
+    }*/
     //1.冒泡排序(n^2时间复杂度)
     public int[] bubbleSort(int[] nums){
         for (int i = 0; i <nums.length-1 ; i++) {
@@ -66,4 +66,22 @@ public class LeetCode88 {
         }
         System.arraycopy(arr, 0, nums1, 0, total);
     }*/
+    //4.因为是非递减的，nums1后面肯定是0，用三个指针指向s1，s2非0的末尾和s1的末尾
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int length = nums1.length - 1;
+        while(m != 0 && n != 0){
+            if(nums1[m - 1] > nums2[n - 1]){
+                nums1[length --] = nums1[m - 1];
+                m--;
+            }else{
+                nums1[length --] = nums2[n - 1];
+                n--;
+            }
+        }
+        //s2的数可能会有,如果有就加上
+        while(n != 0){
+            nums1[length --] = nums2[n - 1];
+            n--;
+        }
+    }
 }
