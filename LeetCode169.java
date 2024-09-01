@@ -48,7 +48,7 @@ public class LeetCode169 {
         return 0;
     }*/
     //4.摩尔投票法(选一个候选人，下一个相同就+1，不相同就-1，为0则换候选人，最后的候选人就是过半的人）
-    public int majorityElement(int[] nums) {
+    public static int majorityElement(int[] nums) {
         int candicate = nums[0],count = 1;
         for (int i = 1; i < nums.length; i++) {
             if(nums[i] == candicate){
