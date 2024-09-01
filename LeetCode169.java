@@ -33,7 +33,7 @@ public class LeetCode169 {
     }*/
 
     //3.sort排序法
-    public static int majorityElement(int[] nums) {
+    /*public static int majorityElement(int[] nums) {
         Arrays.sort(nums);
         int num=1,max=num;
         if(nums.length==1) return nums[0];
@@ -46,8 +46,23 @@ public class LeetCode169 {
             if(num>nums.length/2) return nums[i];
         }
         return 0;
+    }*/
+    //4.摩尔投票法(选一个候选人，下一个相同就+1，不相同就-1，为0则换候选人，最后的候选人就是过半的人）
+    public int majorityElement(int[] nums) {
+        int candicate = nums[0],count = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i] == candicate){
+                count++;
+            }else{
+                count--;
+                if(count == 0){
+                    candicate = nums[i];
+                    count = 1;
+                }
+            }
+        }
+        return candicate;
     }
-
 
     public static void main(String[] args) {
         int[] num = new int[]{3,1,1};
